@@ -1,0 +1,29 @@
+# Ignore Rundirs.
+/run/
+
+# Ignore IDE Files.
+/.idea/
+/eclipse/
+/.settings/
+/.nb-gradle/
+/.nb-gradle-properties
+/.classpath
+/.project
+
+# Ignore Gradle Stuff
+gradle.properties
+.gradle/
+
+# Ignore Git
+.git/
+
+# Ignore Build Files
+/build/
+/dist/
+/out/
+/logs/
+/bin/
+
+# Ignore Dependencies
+/libs/
+*.bak

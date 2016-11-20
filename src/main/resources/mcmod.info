@@ -1,0 +1,22 @@
+[
+	{
+		"modid": "${mod.id}",
+		"name": "${mod.name}",
+
+		"version": "${mod.version}",
+		"mcversion": "${mod.version_minecraft}",
+
+		"logoFile": "assets/${mod.id}/textures/logo.png",
+		"screenshots": [],
+
+		"parent":"",
+		"dependencies": [],
+
+		"authorList": [ "${mod.author}" ],
+		"credits": "QuikMod",
+
+		"url": "${mod.update_url}",
+
+		"description": "A basic QuikMod."
+	}
+]
