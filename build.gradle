@@ -16,3 +16,8 @@ buildscript {
 plugins {
 	id 'com.rlonryan.quikmod' version '1.0.17'
 }
+
+// Dependencies
+dependencies {
+	shade project('lib/QuikCore')
+}

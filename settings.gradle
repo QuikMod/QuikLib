@@ -1,0 +1,10 @@
+//
+// QuikLib settings.gradle
+//
+
+// Root Project Name
+rootProject.name = 'QuikLib'
+
+// Includes
+include 'lib/QuikCore'
+
