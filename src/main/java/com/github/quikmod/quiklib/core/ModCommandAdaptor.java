@@ -1,6 +1,6 @@
 /*
  */
-package com.github.quikmod.quiklib.command;
+package com.github.quikmod.quiklib.core;
 
 import com.github.quikmod.quikcore.command.QuikInvocationResult;
 import com.github.quikmod.quikcore.core.QuikCore;
@@ -18,7 +18,7 @@ import net.minecraft.util.text.TextComponentString;
  *
  * @author Ryan
  */
-public class ModCommand implements ICommand {
+public class ModCommandAdaptor implements ICommand {
 
 	@Override
 	public String getCommandName() {
@@ -73,7 +73,7 @@ public class ModCommand implements ICommand {
 		for (String e : args) {
 			sb.append(e).append(" ");
 		}
-		return sb.toString();
+		return sb.toString().trim();
 	}
 
 }
