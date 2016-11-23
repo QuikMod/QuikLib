@@ -29,7 +29,7 @@ public class ModLogAdapter implements QuikLogAdapter {
 
 	@Override
 	public void debug(Object source, String format, Object... objects) {
-		log(Level.INFO, source, "[AGRI-DEBUG]: " + format, objects);
+		log(Level.INFO, source, "[Debug]: " + format, objects);
 	}
 
 	@Override

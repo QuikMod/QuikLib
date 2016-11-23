@@ -11,8 +11,10 @@ import com.github.quikmod.quiklib.core.ModConfigAdapter;
 import com.github.quikmod.quiklib.core.ModLogAdapter;
 import com.github.quikmod.quiklib.core.ModTranslatorAdapter;
 import com.github.quikmod.quiklib.reference.Reference;
+import com.github.quikmod.quiklib.registry.ModRegistryAdaptor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
@@ -42,6 +44,12 @@ public class QuikLibMod {
 				new ModTranslatorAdapter(),
 				this.adapter
 		);
+	}
+	
+	@EventHandler
+	public void onInit(FMLInitializationEvent event) {
+		ModRegistryAdaptor.registerBlocks();
+		ModRegistryAdaptor.registerItems();
 	}
 	
 	@EventHandler
