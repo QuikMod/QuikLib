@@ -1,6 +1,5 @@
 package com.github.quikmod.quiklib.gui;
 
-import com.github.quikmod.quiklib.core.ModConfigGuiAdaptor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.fml.client.IModGuiFactory;
@@ -20,7 +19,8 @@ public class GuiFactory implements IModGuiFactory {
 
 	@Override
 	public Class<? extends GuiScreen> mainConfigGuiClass() {
-		return ModConfigGuiAdaptor.class;
+		// The master config gui contains all the QuikConfigs.
+		return MasterConfigGui.class;
 	}
 
 	@Override
@@ -32,4 +32,5 @@ public class GuiFactory implements IModGuiFactory {
 	public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
 		return null;
 	}
+
 }

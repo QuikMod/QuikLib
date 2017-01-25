@@ -70,7 +70,7 @@ public class QuikLibMod {
 		return "Command Test Success!";
 	}
 	
-	@QuikConfigurable(config = "QuikLib", key = "test", category = "Test", comment = "Test integer for the config.")
+	@QuikConfigurable(config = "quiklib", key = "test", category = "Test", comment = "Test integer for the config.")
 	public static int test = 0;
 
 }

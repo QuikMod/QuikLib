@@ -1,7 +1,8 @@
-package com.github.quikmod.quiklib.core;
+package com.github.quikmod.quiklib.gui;
 
 import com.github.quikmod.quikcore.core.QuikCore;
 import com.github.quikmod.quiklib.QuikLibMod;
+import com.github.quikmod.quiklib.core.ModConfigAdapter;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.fml.client.config.DummyConfigElement;
@@ -14,9 +15,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @SideOnly(Side.CLIENT)
-public class ModConfigGuiAdaptor extends GuiConfig {
+public class MasterConfigGui extends GuiConfig {
 
-	public ModConfigGuiAdaptor(GuiScreen guiScreen) {
+	public MasterConfigGui(GuiScreen guiScreen) {
 		super(guiScreen, getConfigs(), "quiklib", false, false, "Quik Configurations");
 	}
 	
