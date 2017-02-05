@@ -70,7 +70,10 @@ public class QuikLibMod {
 		return "Command Test Success!";
 	}
 	
-	@QuikConfigurable(config = "quiklib", key = "test", category = "Test", comment = "Test integer for the config.")
+	@QuikConfigurable(key = "test", category = "Test", comment = "Test integer for the config.")
 	public static int test = 0;
+	
+	@QuikConfigurable(key = "bool", category = "Test", comment = "A test boolean. Doesn't do anything. Or does it?")
+	private static boolean testBoolean = false;
 
 }
