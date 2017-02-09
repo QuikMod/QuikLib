@@ -13,7 +13,7 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
-        classpath 'gradle.plugin.com.rlonryan:QuikMod:1.0.18'
+        classpath 'gradle.plugin.com.rlonryan:QuikMod:1.0.20'
     }
 }
 
@@ -36,15 +36,6 @@ configurations.all {
 // Dependencies
 dependencies {
 	shade elastic('QuikCore', 'com.github.quikmod:quikcore:master-SNAPSHOT')
-}
-
-// Elastic Deps.
-def elastic(projectName, notation) {
-	if (allprojects.find { it.name == projectName }) {
-		project(projectName)
-	} else {
-		dependencies.create(notation)
-	}
 }
 
 // Fat Jar Task
