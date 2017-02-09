@@ -8,7 +8,7 @@ buildscript {
         }
         maven {
             name = "Gradle Plugins"
-            url "https://plugins.gradle.org/m2/"
+            url = "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
@@ -20,7 +20,43 @@ buildscript {
 // Apply QuikMod
 apply plugin: 'com.rlonryan.quikmod'
 
+// Add Repositories
+repositories {
+	maven {
+		name = 'JitPack'
+		url = 'https://jitpack.io'
+	}
+}
+
+// Ensure Freshest
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 // Dependencies
 dependencies {
-	shade project('lib/QuikCore')
+	shade elastic('QuikCore', 'com.github.quikmod:quikcore:master-SNAPSHOT')
+}
+
+// Elastic Deps.
+def elastic(projectName, notation) {
+	if (allprojects.find { it.name == projectName }) {
+		project(projectName)
+	} else {
+		dependencies.create(notation)
+	}
+}
+
+// Fat Jar Task
+jar {
+    configurations.shade.each { dep ->
+        from(project.zipTree(dep)){
+            exclude 'META-INF', 'META-INF/**'
+            exclude 'com/google', 'com/google/**'
+            exclude 'net/jcip', 'net/jcip/**'
+            exclude 'edu/umd', 'edu/umd/**'
+            exclude 'javassist', 'javassist/**'
+            exclude 'javax/annotation', 'javax/annotation/**'
+        }
+    }
 }

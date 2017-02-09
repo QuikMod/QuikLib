@@ -6,5 +6,6 @@
 rootProject.name = 'QuikLib'
 
 // Includes
-include 'lib/QuikCore'
+include 'QuikCore'
+project(':QuikCore').projectDir = file('../QuikCore')
 
