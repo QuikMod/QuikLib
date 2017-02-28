@@ -10,7 +10,7 @@ import java.util.Set;
 
 @SideOnly(Side.CLIENT)
 @SuppressWarnings("unused")
-public class GuiFactory implements IModGuiFactory {
+public class QuikLibGuiFactory implements IModGuiFactory {
 
 	@Override
 	public void initialize(Minecraft minecraftInstance) {
@@ -20,7 +20,7 @@ public class GuiFactory implements IModGuiFactory {
 	@Override
 	public Class<? extends GuiScreen> mainConfigGuiClass() {
 		// The master config gui contains all the QuikConfigs.
-		return MasterConfigGui.class;
+		return QuikLibConfigGui.class;
 	}
 
 	@Override

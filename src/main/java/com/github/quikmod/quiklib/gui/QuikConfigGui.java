@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 import net.minecraftforge.fml.common.Loader;
 
 @SideOnly(Side.CLIENT)
-public class ModConfigGui extends GuiConfig {
+public class QuikConfigGui extends GuiConfig {
 	
 	// Heavy Wizardry
 	
 	// Simply use this class as the main config class in the mod's GuiFactory, and QuikLib does the rest.
 
-	public ModConfigGui(GuiScreen guiScreen) {
+	public QuikConfigGui(GuiScreen guiScreen) {
 		super(guiScreen, getConfigElements(), Loader.instance().activeModContainer().getModId(), false, false, Loader.instance().activeModContainer().getName() + " Config");
 	}
 

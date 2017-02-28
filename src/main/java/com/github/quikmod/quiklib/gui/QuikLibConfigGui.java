@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @SideOnly(Side.CLIENT)
-public class MasterConfigGui extends GuiConfig {
+public class QuikLibConfigGui extends GuiConfig {
 
-	public MasterConfigGui(GuiScreen guiScreen) {
+	public QuikLibConfigGui(GuiScreen guiScreen) {
 		super(guiScreen, getConfigs(), "quiklib", false, false, "Quik Configurations");
 	}
 	
