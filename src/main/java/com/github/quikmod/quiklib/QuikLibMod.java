@@ -9,6 +9,7 @@ import com.github.quikmod.quikcore.reflection.Quik;
 import com.github.quikmod.quiklib.core.ModCommandAdaptor;
 import com.github.quikmod.quiklib.core.ModConfigAdapter;
 import com.github.quikmod.quiklib.core.ModLogAdapter;
+import com.github.quikmod.quiklib.core.ModNetworkAdapter;
 import com.github.quikmod.quiklib.core.ModTranslatorAdapter;
 import com.github.quikmod.quiklib.reference.Reference;
 import com.github.quikmod.quiklib.registry.ModRegistryAdaptor;
@@ -42,7 +43,8 @@ public class QuikLibMod {
 		QuikCore.init(
 				new ModLogAdapter(),
 				new ModTranslatorAdapter(),
-				this.adapter
+				this.adapter,
+				new ModNetworkAdapter()
 		);
 	}
 	

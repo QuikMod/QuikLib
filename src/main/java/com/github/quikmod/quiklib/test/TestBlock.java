@@ -13,7 +13,7 @@ import net.minecraft.block.material.Material;
  * @author Ryan
  */
 @Quik
-@QuikBlock(mod="quikmod", name="test_block")
+@QuikBlock(mod="quiklib", name="test_block")
 public class TestBlock extends Block {
 	
 	public TestBlock() {
